@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#fafafa;color:#222}
+header.toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#ffffff;position:sticky;top:0;border-bottom:1px solid #e7e7e7;z-index:5}
+h1{font-size:18px;margin:0}
+.sliders{display:flex;gap:16px;flex-wrap:wrap;max-width:100%}
+.slider-block{display:flex;flex-direction:column;font-size:12px}
+.slider-block input{width:160px}
+table{width:100%;border-collapse:collapse;margin:12px auto;background:#fff}
+thead th{position:sticky;top:62px;background:#fff;z-index:2;border-bottom:1px solid #e7e7e7;padding:8px}
+thead tr.filters th{top:102px;background:#f6f7f9;border-bottom:2px solid #e7e7e7}
+thead tr.filters input{width:100%;padding:6px;border:1px solid #ddd;border-radius:6px;font-size:12px}
+td{padding:8px;border-bottom:1px solid #f0f0f0;text-align:center}
+th.num, td.num{text-align:right}
+img.chart{width:140px;height:70px;object-fit:contain}
+th[data-key]{cursor:pointer}
+th[data-key]:after{content:" ↕";opacity:0.4;font-weight:normal}
+/* cell coloring */
+td.cell{transition:background-color .25s ease, color .25s ease}
+/* spike row effect for 5min alert */
+tr.spike{animation:blink 1.2s ease-in-out 0s 2}
+@keyframes blink{0%{filter:brightness(1)}50%{filter:brightness(1.2)}100%{filter:brightness(1)}}
