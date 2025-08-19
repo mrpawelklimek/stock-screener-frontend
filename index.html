@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stock Screener</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Screener</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>📊 Stock Screener</h1>
+    <h1>Stock Screener</h1>
+    <div id="sliders"></div>
+    <table id="stock-table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>Price</th>
+                <th>5min Change %</th>
+                <th>Daily Change %</th>
+                <th>Weekly Change %</th>
+                <th>Monthly Change %</th>
+                <th>Quarterly Change %</th>
+                <th>Half-Year Change %</th>
+                <th>Yearly Change %</th>
+                <th>Intraday Chart</th>
+                <th>Weekly Chart</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-  <div id="sliders">
-    <label>5min Change %: <input type="range" id="threshold-5min" min="0" max="50" value="10"></label>
-    <label>Daily Change %: <input type="range" id="threshold-daily" min="0" max="50" value="25"></label>
-    <label>Weekly Change %: <input type="range" id="threshold-weekly" min="0" max="50" value="25"></label>
-    <label>Monthly Change %: <input type="range" id="threshold-monthly" min="0" max="50" value="25"></label>
-  </div>
-
-  <table id="stocks-table">
-    <thead>
-      <tr>
-        <th>Symbol</th>
-        <th>Company Name</th>
-        <th>Price</th>
-        <th>5min Change %</th>
-        <th>Daily Change %</th>
-        <th>Weekly Change %</th>
-        <th>Monthly Change %</th>
-        <th>Quarterly Change %</th>
-        <th>Half-Year Change %</th>
-        <th>Yearly Change %</th>
-        <th>Intraday Chart</th>
-        <th>Weekly Chart</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
